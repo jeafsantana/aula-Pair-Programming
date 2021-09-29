@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nomeTf.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -22,6 +23,16 @@ class ViewController: UIViewController {
     @IBAction func pesquisar(_ sender: Any) {
     }
     
+    private func validaTexField(textField : UITextField) {
+        
+    }
+    
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        validaTexField(textField: textField)
+    }
 }
 
 extension ViewController: UITableViewDelegate {}
