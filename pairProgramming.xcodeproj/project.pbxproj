@@ -16,6 +16,7 @@
 		E1BACB562705116500C6343C /* pairProgrammingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BACB552705116500C6343C /* pairProgrammingTests.swift */; };
 		E1BACB602705116500C6343C /* pairProgrammingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BACB5F2705116500C6343C /* pairProgrammingUITests.swift */; };
 		E1BACB622705116500C6343C /* pairProgrammingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BACB612705116500C6343C /* pairProgrammingUITestsLaunchTests.swift */; };
+		E452B87127052BF700174DD2 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452B87027052BF700174DD2 /* Contato.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E1BACB5B2705116500C6343C /* pairProgrammingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pairProgrammingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BACB5F2705116500C6343C /* pairProgrammingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pairProgrammingUITests.swift; sourceTree = "<group>"; };
 		E1BACB612705116500C6343C /* pairProgrammingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pairProgrammingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E452B87027052BF700174DD2 /* Contato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,9 @@
 		E1BACB3D2705116300C6343C /* pairProgramming */ = {
 			isa = PBXGroup;
 			children = (
+				E452B86F27052BAB00174DD2 /* View */,
+				E452B86E27052BA100174DD2 /* Controller */,
+				E452B86D27052B9100174DD2 /* Model */,
 				E1BACB3E2705116300C6343C /* AppDelegate.swift */,
 				E1BACB402705116300C6343C /* SceneDelegate.swift */,
 				E1BACB422705116300C6343C /* ViewController.swift */,
@@ -125,6 +130,28 @@
 				E1BACB612705116500C6343C /* pairProgrammingUITestsLaunchTests.swift */,
 			);
 			path = pairProgrammingUITests;
+			sourceTree = "<group>";
+		};
+		E452B86D27052B9100174DD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E452B87027052BF700174DD2 /* Contato.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E452B86E27052BA100174DD2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E452B86F27052BAB00174DD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E452B87127052BF700174DD2 /* Contato.swift in Sources */,
 				E1BACB432705116300C6343C /* ViewController.swift in Sources */,
 				E1BACB3F2705116300C6343C /* AppDelegate.swift in Sources */,
 				E1BACB412705116300C6343C /* SceneDelegate.swift in Sources */,
