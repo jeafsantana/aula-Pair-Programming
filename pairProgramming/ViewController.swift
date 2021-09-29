@@ -12,14 +12,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var nomeTf: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    private let service = Service()
+    
+    private var contatos: [Contato] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nomeTf.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        
+        loadContatos()
     }
 
+    private func loadContatos() {
+        contatos = service.getContatos()
+    }
+    
     @IBAction func pesquisar(_ sender: Any) {
     }
     
@@ -39,12 +48,16 @@ extension ViewController: UITableViewDelegate {}
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return contatos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "contatoCellIdentifier", for: indexPath) as? ContatoViewCell {
+            cell.setup(contato: contatos[indexPath.row])
+            return cell
+        }
+        
         return UITableViewCell()
     }
-    
 }
 

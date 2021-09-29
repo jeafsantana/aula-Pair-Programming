@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAF4E46F2705326400B5322E /* ContatoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF4E46E2705326400B5322E /* ContatoViewCell.swift */; };
+		BAF4E4722705335600B5322E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF4E4712705335600B5322E /* Service.swift */; };
 		E1BACB3F2705116300C6343C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BACB3E2705116300C6343C /* AppDelegate.swift */; };
 		E1BACB412705116300C6343C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BACB402705116300C6343C /* SceneDelegate.swift */; };
 		E1BACB432705116300C6343C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BACB422705116300C6343C /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BAF4E46E2705326400B5322E /* ContatoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewCell.swift; sourceTree = "<group>"; };
+		BAF4E4712705335600B5322E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		E1BACB3B2705116300C6343C /* pairProgramming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pairProgramming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BACB3E2705116300C6343C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1BACB402705116300C6343C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAF4E46C2705325300B5322E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAF4E46E2705326400B5322E /* ContatoViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAF4E46D2705325800B5322E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BAF4E4702705333C00B5322E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BAF4E4712705335600B5322E /* Service.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		E1BACB322705116300C6343C = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +128,9 @@
 		E1BACB3D2705116300C6343C /* pairProgramming */ = {
 			isa = PBXGroup;
 			children = (
-				E452B86F27052BAB00174DD2 /* View */,
-				E452B86E27052BA100174DD2 /* Controller */,
+				BAF4E4702705333C00B5322E /* Data */,
+				BAF4E46D2705325800B5322E /* Controller */,
+				BAF4E46C2705325300B5322E /* View */,
 				E452B86D27052B9100174DD2 /* Model */,
 				E1BACB3E2705116300C6343C /* AppDelegate.swift */,
 				E1BACB402705116300C6343C /* SceneDelegate.swift */,
@@ -138,20 +166,6 @@
 				E452B87027052BF700174DD2 /* Contato.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		E452B86E27052BA100174DD2 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		E452B86F27052BAB00174DD2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +303,8 @@
 				E1BACB432705116300C6343C /* ViewController.swift in Sources */,
 				E1BACB3F2705116300C6343C /* AppDelegate.swift in Sources */,
 				E1BACB412705116300C6343C /* SceneDelegate.swift in Sources */,
+				BAF4E46F2705326400B5322E /* ContatoViewCell.swift in Sources */,
+				BAF4E4722705335600B5322E /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
