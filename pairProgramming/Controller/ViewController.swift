@@ -35,13 +35,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pesquisar(_ sender: Any) {
-        if nomeTf.text == "a" {
-            print("Aqui")
-        }
-        
         if nomeTf.hasText {
             removeErro(textField: nomeTf)
-            let text = nomeTf.text
+            if let text = nomeTf.text {
+                contatos = service.filtrarContatos(nome: text)
+                tableView.reloadData()
+            }
             
             
         } else {
@@ -62,8 +61,18 @@ class ViewController: UIViewController {
 
 extension ViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-       
+       print("print")
         
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        if textField.hasText {
+            return false
+        } else {
+            contatos = service.getContatos()
+            tableView.reloadData()
+            return true
+        }
     }
 }
 

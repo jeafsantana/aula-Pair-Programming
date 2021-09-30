@@ -22,8 +22,8 @@ class Service {
     func filtrarContatos(nome: String) -> [Contato] {
         var contacts : [Contato] = []
         for contato in contatos {
-            if contato.nome.contains(nome) {
-                contacts.append(contentsOf: contato)
+            if contato.nome.lowercased().contains(nome.lowercased()) {
+                contacts.append(contato)
             }
         }
         return contacts
