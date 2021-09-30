@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         nomeTf.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-        
         loadContatos()
     }
     
@@ -39,17 +38,32 @@ class ViewController: UIViewController {
         if nomeTf.text == "a" {
             print("Aqui")
         }
+        
+        if nomeTf.hasText {
+            removeErro(textField: nomeTf)
+            let text = nomeTf.text
+            
+            
+        } else {
+            mostraErro(textField: nomeTf)
+        }
     }
     
-    private func validaTexField(textField : UITextField) {
+    private func mostraErro(textField : UITextField) {
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.red.cgColor
+    }
+    
+    private func removeErro(textField: UITextField){
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.clear.cgColor
     }
 }
 
 extension ViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        validaTexField(textField: textField)
+       
+        
     }
 }
 
