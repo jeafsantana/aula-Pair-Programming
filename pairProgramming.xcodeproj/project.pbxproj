@@ -87,6 +87,7 @@
 		38C5B81127053AFF001A554F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E1BACB422705116300C6343C /* ViewController.swift */,
 				38C5B81227053B1F001A554F /* DetalheContatoViewController.swift */,
 			);
 			path = Controller;
@@ -95,7 +96,8 @@
 		BAF4E46C2705325300B5322E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BAF4E46E2705326400B5322E /* ContatoViewCell.swift */,
+				E1BACB442705116300C6343C /* Main.storyboard */,
+				D060E21A27053E1D00802308 /* CustomCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,6 +108,14 @@
 				BAF4E4712705335600B5322E /* Service.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		D060E21A27053E1D00802308 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				BAF4E46E2705326400B5322E /* ContatoViewCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		E1BACB322705116300C6343C = {
@@ -137,8 +147,6 @@
 				E452B86D27052B9100174DD2 /* Model */,
 				E1BACB3E2705116300C6343C /* AppDelegate.swift */,
 				E1BACB402705116300C6343C /* SceneDelegate.swift */,
-				E1BACB422705116300C6343C /* ViewController.swift */,
-				E1BACB442705116300C6343C /* Main.storyboard */,
 				E1BACB472705116400C6343C /* Assets.xcassets */,
 				E1BACB492705116400C6343C /* LaunchScreen.storyboard */,
 				E1BACB4C2705116400C6343C /* Info.plist */,

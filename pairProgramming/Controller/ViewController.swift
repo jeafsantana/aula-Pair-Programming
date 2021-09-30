@@ -36,12 +36,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pesquisar(_ sender: Any) {
+        if nomeTf.text == "a" {
+            print("Aqui")
+        }
     }
     
     private func validaTexField(textField : UITextField) {
-        
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.red.cgColor
     }
-    
 }
 
 extension ViewController: UITextFieldDelegate {
