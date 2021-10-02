@@ -9,23 +9,24 @@ import UIKit
 
 class DetalheContatoViewController: UIViewController {
 
+    @IBOutlet weak var nomeLabel: UILabel!
+    @IBOutlet weak var idadeLabel: UILabel!
+    @IBOutlet weak var enderecoLabel: UILabel!
+    @IBOutlet weak var telefoneLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var fotoContatoImageView: UIImageView!
+    
     var contato: Contato?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        nomeLabel.text = contato?.nome
+        idadeLabel.text = "\(contato?.idade)"
+        enderecoLabel.text = contato?.endereco
+        telefoneLabel.text = contato?.telefone
+        emailLabel.text = contato?.email
+        fotoContatoImageView.image = UIImage(named: contato?.image ?? "")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -39,7 +39,12 @@ class ViewController: UIViewController {
             removeErro(textField: nomeTf)
             if let text = nomeTf.text {
                 contatos = service.filtrarContatos(nome: text)
-                tableView.reloadData()
+                if contatos.isEmpty {
+                    mostraErro(textField: nomeTf)
+                } else {
+                    tableView.reloadData()
+                }
+                
             }
             
             
@@ -51,6 +56,7 @@ class ViewController: UIViewController {
     private func mostraErro(textField : UITextField) {
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.red.cgColor
+        textField.text = nil
     }
     
     private func removeErro(textField: UITextField){
@@ -60,18 +66,14 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-       print("print")
-        
-    }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         if textField.hasText {
-            return false
-        } else {
-            contatos = service.getContatos()
+            loadContatos()
             tableView.reloadData()
             return true
+        } else {
+            return false
         }
     }
 }

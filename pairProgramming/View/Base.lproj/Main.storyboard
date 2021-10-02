@@ -99,10 +99,76 @@
                     <view key="view" contentMode="scaleToFill" id="mg5-wq-pIg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP3-AS-thi">
+                                <rect key="frame" x="16" y="288" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1A-bm-Exq">
+                                <rect key="frame" x="16" y="325" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-MN-3Ih">
+                                <rect key="frame" x="16" y="362" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjl-JR-dek">
+                                <rect key="frame" x="16" y="399" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YZ2-wC-qK3">
+                                <rect key="frame" x="147" y="104" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="T14-Fl-9s1"/>
+                                    <constraint firstAttribute="width" constant="120" id="Xmf-73-ZPC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVB-gD-5zU">
+                                <rect key="frame" x="16" y="436" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2Sy-yB-OSc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YZ2-wC-qK3" firstAttribute="top" secondItem="2Sy-yB-OSc" secondAttribute="top" constant="16" id="3Re-ja-H1R"/>
+                            <constraint firstItem="cP3-AS-thi" firstAttribute="top" secondItem="2Sy-yB-OSc" secondAttribute="top" constant="200" id="5GP-0Z-Siq"/>
+                            <constraint firstItem="2Sy-yB-OSc" firstAttribute="trailing" secondItem="Bjl-JR-dek" secondAttribute="trailing" constant="16" id="DMW-rP-rA8"/>
+                            <constraint firstItem="y1A-bm-Exq" firstAttribute="top" secondItem="cP3-AS-thi" secondAttribute="bottom" constant="16" id="EMy-pm-Ozb"/>
+                            <constraint firstItem="Bjl-JR-dek" firstAttribute="leading" secondItem="2Sy-yB-OSc" secondAttribute="leading" constant="16" id="Icl-k1-IUv"/>
+                            <constraint firstItem="2Sy-yB-OSc" firstAttribute="trailing" secondItem="y1A-bm-Exq" secondAttribute="trailing" constant="16" id="Ikc-Kj-znC"/>
+                            <constraint firstItem="YZ2-wC-qK3" firstAttribute="centerX" secondItem="2Sy-yB-OSc" secondAttribute="centerX" id="JN4-Dr-bDb"/>
+                            <constraint firstItem="2Sy-yB-OSc" firstAttribute="trailing" secondItem="Oca-MN-3Ih" secondAttribute="trailing" constant="16" id="Mhv-XF-16X"/>
+                            <constraint firstItem="Bjl-JR-dek" firstAttribute="top" secondItem="Oca-MN-3Ih" secondAttribute="bottom" constant="16" id="NJa-wx-RTQ"/>
+                            <constraint firstItem="HVB-gD-5zU" firstAttribute="leading" secondItem="2Sy-yB-OSc" secondAttribute="leading" constant="16" id="QER-8l-Vtv"/>
+                            <constraint firstItem="Oca-MN-3Ih" firstAttribute="leading" secondItem="2Sy-yB-OSc" secondAttribute="leading" constant="16" id="RIB-LM-XRy"/>
+                            <constraint firstItem="2Sy-yB-OSc" firstAttribute="trailing" secondItem="cP3-AS-thi" secondAttribute="trailing" constant="16" id="Xqr-Vx-xkG"/>
+                            <constraint firstItem="cP3-AS-thi" firstAttribute="leading" secondItem="2Sy-yB-OSc" secondAttribute="leading" constant="16" id="ZoQ-QR-jXC"/>
+                            <constraint firstItem="Oca-MN-3Ih" firstAttribute="top" secondItem="y1A-bm-Exq" secondAttribute="bottom" constant="16" id="ebS-T2-zlh"/>
+                            <constraint firstItem="y1A-bm-Exq" firstAttribute="leading" secondItem="2Sy-yB-OSc" secondAttribute="leading" constant="16" id="k7v-AW-pb7"/>
+                            <constraint firstItem="2Sy-yB-OSc" firstAttribute="trailing" secondItem="HVB-gD-5zU" secondAttribute="trailing" constant="16" id="pEE-ds-JVw"/>
+                            <constraint firstItem="HVB-gD-5zU" firstAttribute="top" secondItem="Bjl-JR-dek" secondAttribute="bottom" constant="16" id="x18-47-F27"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6hb-2b-Vvn"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="HVB-gD-5zU" id="kDR-cr-teW"/>
+                        <outlet property="enderecoLabel" destination="Oca-MN-3Ih" id="gYQ-xp-PcW"/>
+                        <outlet property="fotoContatoImageView" destination="YZ2-wC-qK3" id="GkK-zu-3E5"/>
+                        <outlet property="idadeLabel" destination="y1A-bm-Exq" id="YhB-vq-zz2"/>
+                        <outlet property="nomeLabel" destination="cP3-AS-thi" id="cSD-XG-l4e"/>
+                        <outlet property="telefoneLabel" destination="Bjl-JR-dek" id="L2H-Rc-NfV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suS-WI-FPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
