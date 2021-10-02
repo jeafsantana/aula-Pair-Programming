@@ -39,10 +39,13 @@ class ViewController: UIViewController {
             removeErro(textField: nomeTf)
             if let text = nomeTf.text {
                 contatos = service.filtrarContatos(nome: text)
-                tableView.reloadData()
+                if contatos.count >= 1 {
+                    tableView.reloadData()
+                } else {
+                    nomeTf.text = ""
+                    mostraErro(textField: nomeTf)
+                }
             }
-            
-            
         } else {
             mostraErro(textField: nomeTf)
         }
