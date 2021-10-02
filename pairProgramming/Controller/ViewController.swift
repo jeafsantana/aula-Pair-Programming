@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         nomeTf.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-        loadContatos()
+        loadContatos() 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,22 +35,28 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pesquisar(_ sender: Any) {
+
         if nomeTf.hasText {
             removeErro(textField: nomeTf)
             if let text = nomeTf.text {
                 contatos = service.filtrarContatos(nome: text)
+//                if contatos.isEmpty.hash() == nil {
+//                    mostraErro(textField: nomeTf)
+//                }
                 tableView.reloadData()
             }
-            
-            
         } else {
             mostraErro(textField: nomeTf)
         }
     }
     
     private func mostraErro(textField : UITextField) {
+
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.red.cgColor
+        loadContatos()
+        tableView.reloadData()
+
     }
     
     private func removeErro(textField: UITextField){
@@ -67,11 +73,13 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         if textField.hasText {
-            return false
-        } else {
-            contatos = service.getContatos()
+            textField.layer.borderColor = UIColor.clear.cgColor
+            loadContatos()
             tableView.reloadData()
             return true
+            
+        } else {
+           return false
         }
     }
 }
